@@ -1,4 +1,4 @@
-r"""DETECT: conditional covariances and indices (DESIGN.md §16.13).
+r"""DETECT: conditional covariances and indices (DESIGN.md §4).
 
 Pure NumPy helpers for :func:`flexpyctt.detect` and :func:`flexpyctt.exploratory_detect`.
 Conditional covariances follow Zhang & Stout (1999): the average of the covariance conditional

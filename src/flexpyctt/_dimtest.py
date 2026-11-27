@@ -1,4 +1,4 @@
-r"""DIMTEST: Stout's test of essential unidimensionality (DESIGN.md §16.16).
+r"""DIMTEST: Stout's test of essential unidimensionality (DESIGN.md §7).
 
 Pure NumPy. The statistic is Nandakumar & Stout's (1993) :math:`T_L`; its bias is removed with
 Stout, Froelich & Gao's (2001) bootstrap from kernel-smoothed unidimensional item response

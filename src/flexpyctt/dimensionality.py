@@ -1,4 +1,4 @@
-"""Model-free dimensionality diagnostics (DESIGN.md §16.8, §16.10, §16.13-§16.16, §16.18).
+"""Model-free dimensionality diagnostics (DESIGN.md §3-§7).
 
 How many dimensions: :func:`parallel_analysis`, :func:`velicer_map`, :func:`empirical_kaiser`,
 :func:`efa`, :func:`hull` and :func:`comparison_data`. Is essential unidimensionality tenable:
@@ -1308,7 +1308,7 @@ def dimtest(
     DETECT; the test then uses the other respondents only. This AT search is in the spirit of
     Froelich & Habing's conditional-covariance selection, not their exact procedure. The test is
     accepted on a simulation study (no reference implementation outside DIMPACK; DESIGN.md
-    §16.16).
+    §7).
 
     Parameters
     ----------

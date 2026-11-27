@@ -1,4 +1,4 @@
-# EFA (ULS / ML) and the Hull method (VALIDATION.md V28).
+# EFA (ULS / ML) and the Hull method (DESIGN.md §10, V28).
 # Run from the repository root (after m5_polychoric_reference.R):
 #   Rscript validation/r/m5_efa_hull_reference.R
 # Writes tests/reference/v28_efa_hull.json. CI does not run R; the JSON is committed.

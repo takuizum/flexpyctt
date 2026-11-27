@@ -1,4 +1,4 @@
-# DETECT (VALIDATION.md V27) from sirt's conf.detect / expl.detect with use_sum_score = TRUE.
+# DETECT (DESIGN.md §10, V27) from sirt's conf.detect / expl.detect with use_sum_score = TRUE.
 # Run from the repository root:  Rscript validation/r/m5_detect_reference.R
 # Writes tests/reference/v27_detect.json. CI does not run R; the JSON is committed.
 #

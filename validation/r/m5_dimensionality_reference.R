@@ -1,4 +1,4 @@
-# Number-of-dimensions diagnostics (VALIDATION.md V25): EKC, MAP and parallel analysis.
+# Number-of-dimensions diagnostics (DESIGN.md §10, V25): EKC, MAP and parallel analysis.
 # Run from the repository root (after m5_polychoric_reference.R):
 #   Rscript validation/r/m5_dimensionality_reference.R
 # Writes tests/reference/v25_dimensionality.json. CI does not run R; the JSON is committed.

@@ -1,4 +1,4 @@
-r"""Comparison data (Ruscio & Roche, 2012): population generation and sampling (DESIGN.md §16.15).
+r"""Comparison data (Ruscio & Roche, 2012): population generation and sampling (DESIGN.md §6).
 
 Pure NumPy: principal axis factoring, Ruscio & Kaczetow's (2008) iterative generation of a
 population with ``k`` common factors that reproduces the observed correlations and marginal

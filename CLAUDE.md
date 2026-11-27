@@ -13,9 +13,9 @@
 | `flexpyirt` | takuizum/flexpyirt | flexpyctt に依存し（`flexpyctt>=0.X,<0.(X+1)`）、flexpyctt の公開名を再公開する |
 | `flexpyequate` | takuizum/flexpyequate | 独立（どちらからも依存しない） |
 
-- 設計の記録はまだ flexpyirt の `docs/dev/DESIGN.md`（§16.8〜§16.16、§16.18、§16.20、§16.21、§16.24）に、照合ケース
-  （V24、V25、V27〜V30、V46、V47）は flexpyirt の `docs/dev/VALIDATION.md` にある。docstring の
-  「DESIGN.md §…」はその文書を指す。
+- 設計は `docs/DESIGN.md`（各道具の数式・決定・照合ケース V24、V25、V27〜V30、V46、V47）。作業の前に読み、迷ったら
+  先にそこで決めてからコードを書く。文書の中の「flexpyirt §…」は flexpyirt の `docs/dev/DESIGN.md` を指す
+  （もとの計画 §16.8、JAX 版ポリコリック §16.9、分割の決定 §16.18・§16.24）。
 - 利用者向けのドキュメントも flexpyirt のサイト（<https://takuizum.github.io/flexpyirt/>）にある。
 
 ## 最優先の原則

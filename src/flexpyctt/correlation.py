@@ -1,4 +1,4 @@
-"""Polychoric and tetrachoric correlations (DESIGN.md §16.9, §16.18).
+"""Polychoric and tetrachoric correlations (DESIGN.md §2).
 
 Public entry point :func:`polychoric` and result object :class:`PolychoricResult`. The NumPy /
 SciPy kernels (bivariate normal distribution function, maximum likelihood for all pairs) are in

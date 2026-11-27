@@ -2,7 +2,7 @@
 
 All errors raised intentionally by the library derive from :class:`FlexpycttError`, and all
 warnings from :class:`FlexpycttWarning`, so callers can catch them as a family. flexpyirt
-re-exports these classes from ``flexpyirt.errors`` (DESIGN.md §16.18).
+re-exports these classes from ``flexpyirt.errors`` (DESIGN.md §1).
 """
 
 from __future__ import annotations

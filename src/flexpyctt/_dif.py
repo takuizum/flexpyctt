@@ -1,4 +1,4 @@
-"""Kernels for observed-score DIF (DESIGN.md §16.20).
+"""Kernels for observed-score DIF (DESIGN.md §8).
 
 Every function here works on plain NumPy arrays for one studied item: ``x`` (the item scores),
 ``member`` (0 = reference, 1..G-1 = focal groups) and ``score`` (the matching variable, one value

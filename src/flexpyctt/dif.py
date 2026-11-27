@@ -1,4 +1,4 @@
-"""Differential item functioning on observed scores (DESIGN.md §16.20).
+"""Differential item functioning on observed scores (DESIGN.md §8).
 
 :func:`mantel_haenszel` (0 / 1 items, two groups), :func:`mantel` (ordered polytomous items, two
 groups), :func:`generalized_mantel_haenszel` (several focal groups, or nominal categories) and
@@ -504,7 +504,7 @@ def mantel(
     error of :math:`\ln\hat\psi`, which stays valid with many small strata (sparse matching
     scores) as well as with a few large ones. difR: ``difMantel.poly()``, ``liu_agresti_ccor()``
     (which report :math:`1/\hat\psi`; difR's own standard error is not used, see
-    VALIDATION.md V47).
+    DESIGN.md §10, V47).
 
     Parameters
     ----------
