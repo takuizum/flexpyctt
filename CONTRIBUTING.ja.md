@@ -14,8 +14,8 @@ flexpyctt は関連する 3 つのパッケージの 1 つで、それぞれが�
   乱数を使う関数は `rng`（シードまたは `numpy.random.Generator`）を受け取る。
 - 推定済みのモデル（`FitResult`）が要る道具は flexpyirt に、データだけで済む道具はここに置く。
 - これらの道具の設計の記録は、いまも flexpyirt の設計文書
-  （[DESIGN.ja.md](https://github.com/takuizum/flexpyirt/blob/develop/docs/dev/DESIGN.ja.md) §16.8、§16.18、
-  §16.20、§16.21）にあり、照合ケース（V24、V25、V27〜V30、V46、V47）は flexpyirt の
+  （[DESIGN.ja.md](https://github.com/takuizum/flexpyirt/blob/develop/docs/dev/DESIGN.ja.md) §16.8〜§16.16、
+  §16.18、§16.20、§16.21、§16.24）にあり、照合ケース（V24、V25、V27〜V30、V46、V47）は flexpyirt の
   [VALIDATION.ja.md](https://github.com/takuizum/flexpyirt/blob/develop/docs/dev/VALIDATION.ja.md) にある。
   docstring の「DESIGN.md §…」はその文書を指す。
 - flexpyirt は非公開のヘルパーを 4 つ import している: `correlation._coerce_ordinal` と

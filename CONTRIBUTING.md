@@ -15,8 +15,8 @@ flexpyctt is one of three related packages, each in its own repository with its 
 - A tool that needs a fitted model (`FitResult`) belongs in flexpyirt; one that needs only data
   belongs here.
 - The design notes of these tools are still in flexpyirt's design document
-  ([DESIGN.md](https://github.com/takuizum/flexpyirt/blob/develop/docs/dev/DESIGN.md) §16.8,
-  §16.18, §16.20, §16.21), and the validation cases (V24, V25, V27–V30, V46, V47) in its
+  ([DESIGN.md](https://github.com/takuizum/flexpyirt/blob/develop/docs/dev/DESIGN.md) §16.8–§16.16,
+  §16.18, §16.20, §16.21, §16.24), and the validation cases (V24, V25, V27–V30, V46, V47) in its
   [VALIDATION.md](https://github.com/takuizum/flexpyirt/blob/develop/docs/dev/VALIDATION.md).
   "DESIGN.md §…" in a docstring refers to that document.
 - flexpyirt imports four private helpers: `correlation._coerce_ordinal` and

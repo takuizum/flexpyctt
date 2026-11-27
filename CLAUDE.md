@@ -13,7 +13,7 @@
 | `flexpyirt` | takuizum/flexpyirt | flexpyctt に依存し（`flexpyctt>=0.X,<0.(X+1)`）、flexpyctt の公開名を再公開する |
 | `flexpyequate` | takuizum/flexpyequate | 独立（どちらからも依存しない） |
 
-- 設計の記録はまだ flexpyirt の `docs/dev/DESIGN.md`（§16.8、§16.18、§16.20、§16.21）に、照合ケース
+- 設計の記録はまだ flexpyirt の `docs/dev/DESIGN.md`（§16.8〜§16.16、§16.18、§16.20、§16.21、§16.24）に、照合ケース
   （V24、V25、V27〜V30、V46、V47）は flexpyirt の `docs/dev/VALIDATION.md` にある。docstring の
   「DESIGN.md §…」はその文書を指す。
 - 利用者向けのドキュメントも flexpyirt のサイト（<https://takuizum.github.io/flexpyirt/>）にある。
