@@ -110,3 +110,24 @@ Names follow PEP 8 and read as Python, not as R. `ruff` checks the `N` rules.
 Every document exists in English (`*.md`) and Japanese (`*.ja.md`) with the same content. Update
 both when you change one. `README.md` / `README.ja.md` are also shown on the PyPI project page, so
 their links are absolute and they hold no development information.
+
+`docs/index.md`, `docs/guide.md` and `docs/reference.md` (with their `.ja.md` versions) make up the
+bilingual documentation site (<https://takuizum.github.io/flexpyctt/>, Japanese under `/ja/`;
+MkDocs, `mkdocs.yml`). It is deployed from `main`, so it shows the released state.
+
+```bash
+uv run --group docs mkdocs serve           # preview
+uv run --group docs mkdocs build --strict  # the CI check (fails on broken links and anchors)
+```
+
+- The site is for package users: how to use each function and how to read its result. No
+  design section numbers, validation case IDs or development steps. `docs/DESIGN.md` is the
+  developer's document and is excluded from the site, so site pages must not link to it with a
+  relative link.
+- Links between site pages are relative. `docs/index.md` is the README with relative links: keep
+  the two in step.
+- Python blocks in `docs/index.md` and `docs/guide.md` run in the tests (`tests/test_docs.py`), and
+  the two languages must have the same code. `docs/reference.md` needs an entry for every public
+  name.
+- flexpyirt re-exports these functions and documents them in its own guide and reference too. When
+  a function's behaviour or arguments change, update both sites.

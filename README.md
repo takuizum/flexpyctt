@@ -16,7 +16,7 @@ you do not fit models.
 
 > Under development (0.x). The public API may change before 1.0.0.
 
-**Documentation: <https://takuizum.github.io/flexpyirt/>**
+**Documentation: <https://takuizum.github.io/flexpyctt/>**
 
 ## Features
 
@@ -73,8 +73,8 @@ print(pa.n_factors, velicer_map(pc).n_factors, empirical_kaiser(pc).n_factors)
 Functions that draw random numbers take `rng` (an integer seed or a `numpy.random.Generator`), so
 results are reproducible.
 
-See the [user guide](https://takuizum.github.io/flexpyirt/guide/) and the
-[API reference](https://takuizum.github.io/flexpyirt/reference/) for every function.
+See the [user guide](https://takuizum.github.io/flexpyctt/guide/) and the
+[API reference](https://takuizum.github.io/flexpyctt/reference/) for every function.
 
 ## License
 

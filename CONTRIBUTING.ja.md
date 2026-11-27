@@ -107,3 +107,22 @@ uv run ruff check . && uv run ruff format --check . && uv run mypy && uv run pyt
 どの文書にも英語版（`*.md`）と日本語版（`*.ja.md`）があり、内容は同じである。片方を変えたら両方を直す。
 `README.md` / `README.ja.md` は PyPI のプロジェクトページにも表示されるので、リンクは絶対 URL にし、
 開発に関する情報は書かない。
+
+`docs/index.md`、`docs/guide.md`、`docs/reference.md`（と、それぞれの `.ja.md`）が、英日のドキュメントサイト
+（<https://takuizum.github.io/flexpyctt/>、日本語は `/ja/`。MkDocs、`mkdocs.yml`）になる。`main` からデプロイするので、
+サイトはリリース済みの状態を表示する。
+
+```bash
+uv run --group docs mkdocs serve           # プレビュー
+uv run --group docs mkdocs build --strict  # CI と同じ検査（リンクやアンカーが切れていると失敗する）
+```
+
+- サイトはパッケージの利用者向けで、各関数の使い方と結果の読み方を書く。設計文書の節番号、照合ケースの ID、
+  開発の手順は書かない。`docs/DESIGN.md` は開発者向けの文書で、サイトからは除外している。サイトのページから
+  相対リンクでリンクしない。
+- サイトのページどうしのリンクは相対リンクにする。`docs/index.md` は README のリンクを相対リンクにしたもので、
+  2 つの内容をそろえておく。
+- `docs/index.md` と `docs/guide.md` の Python のブロックはテストで実行する（`tests/test_docs.py`）。英日でコードは
+  同じでなければならない。`docs/reference.md` には、すべての公開名の項目が要る。
+- flexpyirt はこれらの関数を再公開し、自分のガイドとリファレンスでも説明している。関数の挙動や引数を変えたら、
+  両方のサイトを直す。
