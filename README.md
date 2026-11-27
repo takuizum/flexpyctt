@@ -1,6 +1,6 @@
 # flexpyctt
 
-English | [日本語](https://github.com/takuizum/flexpyirt/blob/main/packages/flexpyctt/README.ja.md)
+English | [日本語](https://github.com/takuizum/flexpyctt/blob/main/README.ja.md)
 
 Item and test analysis that needs no fitted IRT model: polychoric correlations, tools for judging
 the number of dimensions of a test, classical item analysis and DIF screening on observed scores. It depends on NumPy, SciPy and pandas only (no JAX).

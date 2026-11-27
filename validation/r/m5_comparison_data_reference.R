@@ -1,7 +1,7 @@
 # Comparison data (VALIDATION.md V29) from EFAtools.
 # Run from the repository root (after m5_polychoric_reference.R and m5_efa_hull_reference.R):
-#   Rscript packages/flexpyctt/validation/r/m5_comparison_data_reference.R
-# Writes packages/flexpyctt/tests/reference/v29_comparison_data.json. CI does not run R; the JSON is committed.
+#   Rscript validation/r/m5_comparison_data_reference.R
+# Writes tests/reference/v29_comparison_data.json. CI does not run R; the JSON is committed.
 #
 # 1. Principal axis factoring as used by the generator: EFAtools:::.paf_iter from unit
 #    communalities (criterion 0.001, absolute eigenvalues, max_iter 50).
@@ -17,8 +17,8 @@ suppressMessages({
   library(jsonlite)
 })
 ns <- asNamespace("EFAtools")
-v24 <- fromJSON(file.path("packages", "flexpyctt", "tests", "reference", "v24_polychoric.json"), simplifyVector = FALSE)
-v28 <- fromJSON(file.path("packages", "flexpyctt", "tests", "reference", "v28_efa_hull.json"), simplifyVector = FALSE)
+v24 <- fromJSON(file.path("tests", "reference", "v24_polychoric.json"), simplifyVector = FALSE)
+v28 <- fromJSON(file.path("tests", "reference", "v28_efa_hull.json"), simplifyVector = FALSE)
 as_matrix <- function(rows) do.call(rbind, lapply(rows, function(r) unlist(lapply(r, function(v) if (is.null(v)) NA else v))))
 rows_of <- function(m) lapply(seq_len(nrow(m)), function(i) unname(as.list(m[i, ])))
 
@@ -74,6 +74,6 @@ res <- list(
               efatools_version = as.character(packageVersion("EFAtools")), converged = TRUE),
   paf = list(case = "sim_3f", fits = paf), generator = generator, cd = cds
 )
-write_json(res, file.path("packages", "flexpyctt", "tests", "reference", "v29_comparison_data.json"), auto_unbox = TRUE,
+write_json(res, file.path("tests", "reference", "v29_comparison_data.json"), auto_unbox = TRUE,
            digits = NA, null = "null", pretty = FALSE)
-cat("wrote packages/flexpyctt/tests/reference/v29_comparison_data.json\n")
+cat("wrote tests/reference/v29_comparison_data.json\n")

@@ -1,7 +1,7 @@
 """DIMTEST simulation study (VALIDATION.md V30): type I error and power.
 
 Run from the repository root:
-  uv run python packages/flexpyctt/validation/simulation/dimtest_study.py
+  uv run python validation/simulation/dimtest_study.py
 Writes dimtest_study.json next to this file. Not run in CI (minutes); the test suite runs a
 small version of the same conditions.
 

@@ -1,6 +1,6 @@
 # flexpyctt
 
-[English](https://github.com/takuizum/flexpyirt/blob/main/packages/flexpyctt/README.md) | 日本語
+[English](https://github.com/takuizum/flexpyctt/blob/main/README.md) | 日本語
 
 推定済みの IRT モデルを使わない項目・テスト分析のライブラリです。ポリコリック相関、テストの次元数を調べる道具、
 古典的項目分析、観測得点による DIF の検出を提供します。依存は NumPy、SciPy、pandas だけです（JAX は不要）。

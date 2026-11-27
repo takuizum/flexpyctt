@@ -1,6 +1,6 @@
 # Polychoric / tetrachoric correlations (VALIDATION.md V24) from lavaan's lavCor and psych.
-# Run from the repository root:  Rscript packages/flexpyctt/validation/r/m5_polychoric_reference.R
-# Writes packages/flexpyctt/tests/reference/v24_polychoric.json. CI does not run R; the JSON is committed.
+# Run from the repository root:  Rscript validation/r/m5_polychoric_reference.R
+# Writes tests/reference/v24_polychoric.json. CI does not run R; the JSON is committed.
 #
 # lavaan (two-step ML, nlminb with analytic gradient and Hessian) is the tight reference. psych's
 # polychoric maximizes the same likelihood with optimize() at its default tolerance
@@ -117,6 +117,6 @@ res <- list(
   smooth = list(input = unname(bad), output = unname(smooth_ref),
                 min_eigenvalue = min(eigen(bad, only.values = TRUE)$values))
 )
-write_json(res, file.path("packages", "flexpyctt", "tests", "reference", "v24_polychoric.json"), auto_unbox = TRUE,
+write_json(res, file.path("tests", "reference", "v24_polychoric.json"), auto_unbox = TRUE,
            digits = NA, null = "null", pretty = FALSE)
-cat("wrote packages/flexpyctt/tests/reference/v24_polychoric.json\n")
+cat("wrote tests/reference/v24_polychoric.json\n")
