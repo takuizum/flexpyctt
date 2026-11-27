@@ -1,8 +1,8 @@
 # Classical item analysis (VALIDATION.md V46): keyed scoring, coefficient alpha, item statistics,
 # point-biserial / biserial / polyserial correlations, omega total and option analysis.
 # Run from the repository root:
-#   Rscript packages/flexpyctt/validation/r/ctt_item_analysis_reference.R
-# Writes packages/flexpyctt/tests/reference/v46_item_analysis.json. CI does not run R; the JSON is
+#   Rscript validation/r/ctt_item_analysis_reference.R
+# Writes tests/reference/v46_item_analysis.json. CI does not run R; the JSON is
 # committed.
 #
 # References: psych (alpha, score.multiple.choice, responseFrequency, polyserial, biserial, fa,
@@ -240,6 +240,6 @@ res <- list(
   three_items = small,
   reversed_item = reversed_case
 )
-out <- file.path("packages", "flexpyctt", "tests", "reference", "v46_item_analysis.json")
+out <- file.path("tests", "reference", "v46_item_analysis.json")
 write_json(res, out, auto_unbox = TRUE, digits = NA, null = "null", na = "null", pretty = FALSE)
 cat("wrote", out, "\n")

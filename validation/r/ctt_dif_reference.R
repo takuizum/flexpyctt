@@ -1,7 +1,7 @@
 # Observed-score DIF (VALIDATION.md V47): Mantel-Haenszel, generalized MH, Mantel and logistic
 # regression, with purification of the matching score.
-# Run from the repository root:  Rscript packages/flexpyctt/validation/r/ctt_dif_reference.R
-# Writes packages/flexpyctt/tests/reference/v47_dif.json. CI does not run R; the JSON is committed.
+# Run from the repository root:  Rscript validation/r/ctt_dif_reference.R
+# Writes tests/reference/v47_dif.json. CI does not run R; the JSON is committed.
 #
 # References: difR (difMH / mantelHaenszel, difGMH / genMantelHaenszel, difLogistic / Logistik,
 # difMantel.poly, liu_agresti_ccor) and stats::mantelhaen.test. difMantel.poly rounds its output
@@ -379,6 +379,6 @@ res <- list(
   mantel = mantel_cases,
   logistic = list(cases = logistic_cases, matching = logistic_matching, anchor = logistic_anchor)
 )
-write_json(res, file.path("packages", "flexpyctt", "tests", "reference", "v47_dif.json"),
+write_json(res, file.path("tests", "reference", "v47_dif.json"),
            auto_unbox = TRUE, digits = NA, null = "null", pretty = FALSE)
-cat("wrote packages/flexpyctt/tests/reference/v47_dif.json\n")
+cat("wrote tests/reference/v47_dif.json\n")
