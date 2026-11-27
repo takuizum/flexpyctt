@@ -14,7 +14,7 @@ flexpyirt をインストールすると flexpyctt も入ります。モデル�
 
 > 開発中（0.x）。1.0.0 までは公開 API が変わることがあります。
 
-**ドキュメント: <https://takuizum.github.io/flexpyirt/ja/>**
+**ドキュメント: <https://takuizum.github.io/flexpyctt/ja/>**
 
 ## 機能
 
@@ -69,8 +69,8 @@ print(pa.n_factors, velicer_map(pc).n_factors, empirical_kaiser(pc).n_factors)
 
 乱数を使う関数は `rng`（整数のシードまたは `numpy.random.Generator`）を受け取るので、結果を再現できます。
 
-各関数の詳細は[ユーザーガイド](https://takuizum.github.io/flexpyirt/ja/guide/)と
-[API リファレンス](https://takuizum.github.io/flexpyirt/ja/reference/)を参照してください。
+各関数の詳細は[ユーザーガイド](https://takuizum.github.io/flexpyctt/ja/guide/)と
+[API リファレンス](https://takuizum.github.io/flexpyctt/ja/reference/)を参照してください。
 
 ## ライセンス
 

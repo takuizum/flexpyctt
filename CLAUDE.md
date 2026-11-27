@@ -16,7 +16,9 @@
 - 設計の記録はまだ flexpyirt の `docs/dev/DESIGN.md`（§16.8〜§16.16、§16.18、§16.20、§16.21、§16.24）に、照合ケース
   （V24、V25、V27〜V30、V46、V47）は flexpyirt の `docs/dev/VALIDATION.md` にある。docstring の
   「DESIGN.md §…」はその文書を指す。
-- 利用者向けのドキュメントも flexpyirt のサイト（<https://takuizum.github.io/flexpyirt/>）にある。
+- 利用者向けのドキュメントサイトは `docs/index.md`・`guide.md`・`reference.md`（英日）から作る
+  （<https://takuizum.github.io/flexpyctt/>、`uv run --group docs mkdocs build --strict` が CI と同じ検査）。flexpyirt の
+  サイトにも同じ関数の説明があるので、挙動や引数を変えたら両方を直す。
 
 ## 最優先の原則
 
