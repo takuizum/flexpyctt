@@ -26,7 +26,9 @@
 3. **JAX も flexpyirt も import しない。** 乱数は `rng`（`numpy.random.Generator` または整数のシード）で受け取る。
    `FitResult` が要る道具は flexpyirt に置く。
 4. **公開 API の互換性。** flexpyirt がマイナーバージョンの範囲で依存しているので、パッチリリース（`0.x.Y`）で公開 API を
-   壊さない。壊す変更はマイナーリリースにし、flexpyirt 側の依存範囲の更新とセットで行う。
+   壊さない。壊す変更はマイナーリリースにし、flexpyirt 側の依存範囲の更新とセットで行う。flexpyirt が import している
+   非公開ヘルパー 4 つ（`_coerce_ordinal`、`_observed_correlation`、`_eigenvalues`、`_descending_eigenvalues`）も
+   同じ扱いにする。
 5. **小さくコミット。**
 
 ## 開発環境

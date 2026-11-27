@@ -2,10 +2,13 @@
 
 from __future__ import annotations
 
+import inspect
 import re
 import subprocess
 import sys
+from collections.abc import Callable
 from pathlib import Path
+from typing import Any
 
 import pytest
 
@@ -26,6 +29,30 @@ def test_import_does_not_load_jax_or_flexpyirt() -> None:
         "assert not bad, bad"
     )
     subprocess.run([sys.executable, "-c", code], check=True)
+
+
+def test_private_helpers_that_flexpyirt_imports_keep_their_signatures() -> None:
+    """flexpyirt.dimensionality imports these four private helpers (CONTRIBUTING.md).
+
+    flexpyirt requires ``flexpyctt>=0.X,<0.(X+1)``, so they must not change in a patch release;
+    change them in a minor release, together with flexpyirt.
+    """
+    from flexpyctt import correlation, dimensionality
+
+    expected: dict[Callable[..., Any], list[str]] = {
+        correlation._coerce_ordinal: ["data"],
+        dimensionality._descending_eigenvalues: ["mat"],
+        dimensionality._eigenvalues: ["mat", "eigen_type"],
+        dimensionality._observed_correlation: [
+            "values",
+            "names",
+            "correlation_kind",
+            "zero_cell_correction",
+            "quiet",
+        ],
+    }
+    for function, parameters in expected.items():
+        assert list(inspect.signature(function).parameters) == parameters, function.__name__
 
 
 README_DIR = Path(__file__).resolve().parents[1]

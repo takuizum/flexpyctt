@@ -18,6 +18,9 @@ flexpyctt は関連する 3 つのパッケージの 1 つで、それぞれが�
   §16.20、§16.21）にあり、照合ケース（V24、V25、V27〜V30、V46、V47）は flexpyirt の
   [VALIDATION.ja.md](https://github.com/takuizum/flexpyirt/blob/develop/docs/dev/VALIDATION.ja.md) にある。
   docstring の「DESIGN.md §…」はその文書を指す。
+- flexpyirt は非公開のヘルパーを 4 つ import している: `correlation._coerce_ordinal` と
+  `dimensionality._observed_correlation`、`_eigenvalues`、`_descending_eigenvalues`。これらのシグネチャと挙動は
+  公開 API と同じに扱う（`tests/test_package.py` がシグネチャを確認する）。
 
 ## ブランチ
 
