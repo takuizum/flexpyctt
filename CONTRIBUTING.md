@@ -14,11 +14,10 @@ flexpyctt is one of three related packages, each in its own repository with its 
   that draw random numbers take `rng` (a seed or `numpy.random.Generator`).
 - A tool that needs a fitted model (`FitResult`) belongs in flexpyirt; one that needs only data
   belongs here.
-- The design notes of these tools are still in flexpyirt's design document
-  ([DESIGN.md](https://github.com/takuizum/flexpyirt/blob/develop/docs/dev/DESIGN.md) §16.8–§16.16,
-  §16.18, §16.20, §16.21, §16.24), and the validation cases (V24, V25, V27–V30, V46, V47) in its
-  [VALIDATION.md](https://github.com/takuizum/flexpyirt/blob/develop/docs/dev/VALIDATION.md).
-  "DESIGN.md §…" in a docstring refers to that document.
+- The design is in [docs/DESIGN.md](docs/DESIGN.md): what each tool computes, the decisions and
+  the validation cases (V24, V25, V27–V30, V46, V47). Decide there first, then write the code.
+  "DESIGN.md §…" in a docstring refers to it; "flexpyirt §…" inside it refers to flexpyirt's
+  design document, where the plan for these tools and the JAX polychoric implementation are.
 - flexpyirt imports four private helpers: `correlation._coerce_ordinal` and
   `dimensionality._observed_correlation`, `_eigenvalues`, `_descending_eigenvalues`. Treat their
   signatures and behaviour as public (`tests/test_package.py` checks the signatures).

@@ -1,4 +1,4 @@
-# Observed-score DIF (VALIDATION.md V47): Mantel-Haenszel, generalized MH, Mantel and logistic
+# Observed-score DIF (DESIGN.md §10, V47): Mantel-Haenszel, generalized MH, Mantel and logistic
 # regression, with purification of the matching score.
 # Run from the repository root:  Rscript validation/r/ctt_dif_reference.R
 # Writes tests/reference/v47_dif.json. CI does not run R; the JSON is committed.

@@ -1,4 +1,4 @@
-"""Package-level checks: public names, version, README and the no-JAX rule (DESIGN.md §16.18)."""
+"""Package-level checks: public names, version, README and the no-JAX rule (DESIGN.md §1)."""
 
 from __future__ import annotations
 
@@ -82,3 +82,15 @@ def test_readme_languages_have_the_same_code() -> None:
         for n in ("README.md", "README.ja.md")
     )
     assert english == japanese
+
+
+def test_design_document_has_the_same_sections_in_both_languages() -> None:
+    """docs/DESIGN.md and DESIGN.ja.md have the same ten sections and list the same cases."""
+    docs = README_DIR / "docs"
+    english, japanese = (
+        (docs / name).read_text(encoding="utf-8") for name in ("DESIGN.md", "DESIGN.ja.md")
+    )
+    numbers = [re.findall(r"^## (\d+)\. ", text, re.M) for text in (english, japanese)]
+    assert numbers[0] == numbers[1] == [str(k) for k in range(1, 11)]
+    for case in ("V24", "V25", "V27", "V28", "V29", "V30", "V46", "V47"):
+        assert f"| {case} |" in english and f"| {case} |" in japanese

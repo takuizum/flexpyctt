@@ -1,4 +1,4 @@
-r"""Exploratory factor analysis of a correlation matrix and the Hull method (DESIGN.md §16.14).
+r"""Exploratory factor analysis of a correlation matrix and the Hull method (DESIGN.md §5).
 
 Unrotated ULS (minres) and ML factor solutions by minimizing over the uniquenesses
 :math:`\Psi` with L-BFGS-B and analytic gradients (Jöreskog, 1967; Harman & Jones, 1966), the

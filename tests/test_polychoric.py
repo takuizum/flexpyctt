@@ -1,4 +1,4 @@
-"""Polychoric / tetrachoric correlations (DESIGN.md §16.9, §16.18, VALIDATION.md V24).
+"""Polychoric / tetrachoric correlations (DESIGN.md §2 and §10, V24).
 
 Unit tests of the bivariate normal distribution function, the analytic derivatives and the shell
 layer, and the reference comparison against lavaan's ``lavCor`` (tight) and psych's

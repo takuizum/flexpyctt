@@ -1,4 +1,4 @@
-# Comparison data (VALIDATION.md V29) from EFAtools.
+# Comparison data (DESIGN.md §10, V29) from EFAtools.
 # Run from the repository root (after m5_polychoric_reference.R and m5_efa_hull_reference.R):
 #   Rscript validation/r/m5_comparison_data_reference.R
 # Writes tests/reference/v29_comparison_data.json. CI does not run R; the JSON is committed.

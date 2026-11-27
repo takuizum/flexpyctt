@@ -1,4 +1,4 @@
-"""DIMTEST simulation study (VALIDATION.md V30): type I error and power.
+"""DIMTEST simulation study (DESIGN.md §10, V30): type I error and power.
 
 Run from the repository root:
   uv run python validation/simulation/dimtest_study.py

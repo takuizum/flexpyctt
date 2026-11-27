@@ -13,11 +13,10 @@ flexpyctt は関連する 3 つのパッケージの 1 つで、それぞれが�
 - **flexpyctt は JAX も flexpyirt も import しない。**CI で、どちらもインストールされていないことを確認する。
   乱数を使う関数は `rng`（シードまたは `numpy.random.Generator`）を受け取る。
 - 推定済みのモデル（`FitResult`）が要る道具は flexpyirt に、データだけで済む道具はここに置く。
-- これらの道具の設計の記録は、いまも flexpyirt の設計文書
-  （[DESIGN.ja.md](https://github.com/takuizum/flexpyirt/blob/develop/docs/dev/DESIGN.ja.md) §16.8〜§16.16、
-  §16.18、§16.20、§16.21、§16.24）にあり、照合ケース（V24、V25、V27〜V30、V46、V47）は flexpyirt の
-  [VALIDATION.ja.md](https://github.com/takuizum/flexpyirt/blob/develop/docs/dev/VALIDATION.ja.md) にある。
-  docstring の「DESIGN.md §…」はその文書を指す。
+- 設計は [docs/DESIGN.ja.md](docs/DESIGN.ja.md) にある（各道具が何を計算するか、決めたこと、照合ケース V24、V25、
+  V27〜V30、V46、V47）。先にそこで決めてから、コードを書く。docstring の「DESIGN.md §…」はこの文書を指す。
+  文書の中の「flexpyirt §…」は flexpyirt の設計文書を指す（これらの道具の計画と、JAX 版ポリコリックの実装が
+  そこにある）。
 - flexpyirt は非公開のヘルパーを 4 つ import している: `correlation._coerce_ordinal` と
   `dimensionality._observed_correlation`、`_eigenvalues`、`_descending_eigenvalues`。これらのシグネチャと挙動は
   公開 API と同じに扱う（`tests/test_package.py` がシグネチャを確認する）。

@@ -64,9 +64,10 @@ fallback_version = "0.0.0"
 [tool.hatch.build.targets.wheel]
 packages = ["src/flexpyctt"]
 
-# The sdist carries the sources, the tests (with the R reference values) and the R scripts.
+# The sdist carries the sources, the tests (with the R reference values), the R scripts and the
+# design document.
 [tool.hatch.build.targets.sdist]
-include = ["/src", "/tests", "/validation", "/README.md", "/README.ja.md", "/LICENSE"]
+include = ["/src", "/tests", "/validation", "/docs", "/README.md", "/README.ja.md", "/LICENSE"]
 
 [tool.ruff]
 line-length = 100

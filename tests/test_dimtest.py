@@ -1,4 +1,4 @@
-"""DIMTEST (DESIGN.md §16.16, VALIDATION.md V30).
+"""DIMTEST (DESIGN.md §7 and §10, V30).
 
 There is no reference implementation outside DIMPACK, so DIMTEST is accepted on a simulation
 study (``validation/simulation/dimtest_study.py``); these tests check the pieces against direct
@@ -143,7 +143,7 @@ def test_invalid_data() -> None:
 
 
 def test_small_simulation_study_type_i_error_and_power() -> None:
-    """A small version of validation/simulation/dimtest_study.py (VALIDATION.md V30)."""
+    """A small version of validation/simulation/dimtest_study.py (DESIGN.md §10, V30)."""
     null = [dimtest(_simulate(100 + r, 1000, 20, 1.0), rng=r) for r in range(20)]
     t = np.array([res.statistic for res in null])
     assert np.mean([res.p_value < 0.05 for res in null]) <= 0.15

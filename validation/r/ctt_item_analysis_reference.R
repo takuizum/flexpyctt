@@ -1,4 +1,4 @@
-# Classical item analysis (VALIDATION.md V46): keyed scoring, coefficient alpha, item statistics,
+# Classical item analysis (DESIGN.md §10, V46): keyed scoring, coefficient alpha, item statistics,
 # point-biserial / biserial / polyserial correlations, omega total and option analysis.
 # Run from the repository root:
 #   Rscript validation/r/ctt_item_analysis_reference.R

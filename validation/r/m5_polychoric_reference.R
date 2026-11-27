@@ -1,4 +1,4 @@
-# Polychoric / tetrachoric correlations (VALIDATION.md V24) from lavaan's lavCor and psych.
+# Polychoric / tetrachoric correlations (DESIGN.md §10, V24) from lavaan's lavCor and psych.
 # Run from the repository root:  Rscript validation/r/m5_polychoric_reference.R
 # Writes tests/reference/v24_polychoric.json. CI does not run R; the JSON is committed.
 #

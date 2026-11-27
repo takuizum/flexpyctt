@@ -1,4 +1,4 @@
-r"""Polychoric / tetrachoric correlations: NumPy / SciPy kernels (DESIGN.md §16.18).
+r"""Polychoric / tetrachoric correlations: NumPy / SciPy kernels (DESIGN.md §2).
 
 The bivariate normal distribution function uses Owen's (1956) :math:`T` function
 (:func:`scipy.special.owens_t`), the two-step maximum likelihood estimator of the correlation
